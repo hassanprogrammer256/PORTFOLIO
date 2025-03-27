@@ -424,3 +424,29 @@
 
 
 })(jQuery, window)
+
+function openWhatsapp(){
+    let phonenumber = '256769643744'
+    let message='Hello HASSAN,I would like to know more about your services.'
+
+    let url = `https://api.whatsapp.com/send?phone=${phonenumber}&text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+    return false;
+}
+
+async function sendmessage(e){
+e.preventDefault();
+let name= document.querySelector("#contact-name").value
+let phoneNumber= document.querySelector("#contact-phone").value
+let email= document.querySelector("#contact-email").value
+let subject= document.querySelector("#subject").value
+let mesage= document.querySelector("#contact-message").value
+
+await fetch(`https://localhost:3000/send`,((res) =>{
+    res.json()
+}).then((error) => {console.log(error)}))
+
+
+
+
+}

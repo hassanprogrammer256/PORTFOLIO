@@ -38,6 +38,12 @@
 /* Default  */
 @import url("../../../../css2.css");
 @import url("../../../../css2-1.css");
+.cursor-pointer{cursor:pointer;}
+.text-red{color: var(--color-primary);}
+.hero-img{cursor: pointer; transition: opacity.9s ease-in-out;}
+.hero-img:hover{
+  opacity: .2;
+  transition: opacity.9s ease-in-out;}
 :root {
   --color-primary: #ff014f;
   --color-secondary: #f4f5f6;
